@@ -1,0 +1,57 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = "neoclide/coc.nvim"
+merge = 0
+rev = "release"
+hook_add = """
+source ~/.config/nvim/plugins/coc.rc.vim
+"""
+
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+hook_add = """
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
+"""
+
+[[plugins]]
+repo = "machakann/vim-highlightedyank"
+hook_add = """
+let g:highlightedyank_highlight_duration = 300
+"""
+
+[[plugins]]
+repo = "preservim/nerdtree"
+hook_add = """
+au VimEnter * NERDTree
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+"""
+
+[[plugins]]
+repo = "nvim-lua/plenary.nvim"
+
+[[plugins]]
+repo = "nvim-telescope/telescope.nvim"
+rev = "0.1.1"
+hook_add = """
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+"""
